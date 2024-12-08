@@ -21,12 +21,27 @@ const mockGraph: SocialNetworkGraph = {
 };
 
 class MockSocialNetworkGraphService implements SocialNetworkGraphService {
-  // implement method and props
+  countPeopleWithNoConnections(graph: SocialNetworkGraph): number {
+    const connectedPeople = new Set<string>();
+
+    for (const relationship of graph.relationships) {
+      const { type, startNode, endNode } = relationship;
+      if (type === "HasConnection") {
+        connectedPeople.add(startNode);
+        connectedPeople.add(endNode);
+      }
+    }
+
+    return graph.people.filter((person) => !connectedPeople.has(person.name))
+      .length;
+  }
 }
 
 describe("CountPeopleWithNoConnections", () => {
   const mockSocialNetworkGraphService = new MockSocialNetworkGraphService();
-  const countPeopleWithNoConnections = new CountPeopleWithNoConnections(mockSocialNetworkGraphService);
+  const countPeopleWithNoConnections = new CountPeopleWithNoConnections(
+    mockSocialNetworkGraphService,
+  );
 
   it("should return 0 when there are no people with no connections", () => {
     const count = countPeopleWithNoConnections.execute(mockGraph);
