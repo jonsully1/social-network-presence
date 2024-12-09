@@ -8,6 +8,8 @@ interface Relationship {
   endNode: string;
 }
 
+export type Graph = Map<string, string[]>;
+
 export interface SocialNetworkGraph {
   name: string;
   people: Person[];
