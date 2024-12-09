@@ -25,15 +25,47 @@ describe("CountConnectionsByDegreesOfSeparation", () => {
     expect(count).toStrictEqual(degreesOfSeparation);
   });
 
-  // it("should return 3 connections at 1 degree and 0 connections at 2 degrees for Peter", () => {
-  //   const person = "Peter";
-  //   const count = countDegreesOfSeparation.execute(
-  //     person,
-  //     mockGraphOnePersonWithNoConnections,
-  //   );
+  it("should return 3 connections at 1 degree and 0 connections at 2 degrees for Peter", () => {
+    const person = "Peter";
+    const count = countDegreesOfSeparation.execute(
+      person,
+      mockGraphOnePersonWithNoConnections,
+    );
 
-  //   // const expected: DegreesOfSeparationCount = { oneDegree: 1, twoDegrees: 2 };
-  //   const expected: Record<number, number> = { 1: 3, 2: 0 };
-  //   expect(count).toStrictEqual(expected);
-  // });
+    const degreesOfSeparation: DegreesOfSeparationCount = { 1: 3, 2: 0 };
+    expect(count).toStrictEqual(degreesOfSeparation);
+  });
+
+  it("should return 2 connections at 1 degree and 1 connections at 2 degrees for George", () => {
+    const person = "George";
+    const count = countDegreesOfSeparation.execute(
+      person,
+      mockGraphOnePersonWithNoConnections,
+    );
+
+    const degreesOfSeparation: DegreesOfSeparationCount = { 1: 2, 2: 1 };
+    expect(count).toStrictEqual(degreesOfSeparation);
+  });
+
+  it("should return 0 connections at both 1 degree and 2 degrees for Harry", () => {
+    const person = "Harry";
+    const count = countDegreesOfSeparation.execute(
+      person,
+      mockGraphOnePersonWithNoConnections,
+    );
+
+    const degreesOfSeparation: DegreesOfSeparationCount = { 1: 0, 2: 0 };
+    expect(count).toStrictEqual(degreesOfSeparation);
+  });
+
+  it("should return 1 connections at 1 degree and 2 connections at 2 degrees for Anna", () => {
+    const person = "Anna";
+    const count = countDegreesOfSeparation.execute(
+      person,
+      mockGraphOnePersonWithNoConnections,
+    );
+
+    const degreesOfSeparation: DegreesOfSeparationCount = { 1: 1, 2: 2 };
+    expect(count).toStrictEqual(degreesOfSeparation);
+  });
 });
