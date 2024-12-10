@@ -1,5 +1,5 @@
 import request from "supertest";
-import server from "../../../src/server";
+import server from "../../../src/infrastructure/server"
 import SocialNetworkRouter from "../../../src/infrastructure/routes/SocialNetworkRouter";
 import { CountPeopleWithNoConnections } from "../../../src/domain/use-cases/CountPeopleWithNoConnections";
 import { MockSocialNetworkGraphService } from "../../domain/mocks/MockSocialNetworkGraphService";
