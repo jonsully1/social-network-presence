@@ -1,5 +1,27 @@
 ## Coding Task - Social Network Presence (Full Stack) ##
 
+### Introduction
+
+This is a clean architecture inspired code challenge. It's aim is to implement a full stack application whose backend REST API consumes a fictional third party API and a frontend that allows users to query the backend as a proxy to the third party API.
+
+The backend (currently in progress) will attempt to adhere to clean architecture and SOLID principles. It will be written in Typescript/Node and will use Express as the web api framework. 
+
+The frontend, where possible, will also follow clean architecture and SOLID principles and will be written in React.
+
+The entire application will be run using Docker and Docker Compose.
+
+#### Running test suites
+
+**Backend**
+
+```
+npm run test:backend
+```
+
+*Futher updates to come as the project progresses.*
+
+## The Code Challenge
+
 A third party provider has exposed an end-point for you that retrieves a graph representation using JSON like the following:
 
 GET https://my-third-party/facebook
