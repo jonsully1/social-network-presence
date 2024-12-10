@@ -10,7 +10,7 @@ The frontend, where possible, will also follow clean architecture and SOLID prin
 
 The entire application will be run using Docker and Docker Compose.
 
-#### Running test suites
+## Running test suites
 
 **Backend**
 
