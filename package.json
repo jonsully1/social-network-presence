@@ -1,12 +1,10 @@
 {
   "name": "social-network-presence",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Clean Architecture inspired Code Challenge - Node, Typescript, Express, React",
+  "license": "ISC",
+  "author": "John O'Sullivan",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "test:backend": "npm --prefix backend test"
+  }
 }
