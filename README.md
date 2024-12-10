@@ -1,6 +1,6 @@
 ## Coding Task - Social Network Presence (Full Stack) ##
 
-### Introduction
+## Introduction
 
 This is a clean architecture inspired code challenge. It's aim is to implement a full stack application whose backend REST API consumes a fictional third party API and a frontend that allows users to query the backend as a proxy to the third party API.
 
