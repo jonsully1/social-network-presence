@@ -2,7 +2,7 @@ import { DegreesOfSeparationCount } from "../../../src/domain/interfaces/Degrees
 import { SocialNetworkGraphServiceImpl } from "../../../src/infrastructure/services/SocialNetworkGraphServiceImpl";
 import { mockGraphOnePersonWithNoConnections } from "../../domain/mocks/graphResponseData";
 
-describe("SocialNetworkGraphService", () => {
+describe("SocialNetworkGraphServiceImpl", () => {
   it("countPeopleWithNoConnections should return 1 for John", async () => {
     const socialNetworkGraphService = new SocialNetworkGraphServiceImpl();
 
