@@ -4,7 +4,7 @@
   "transform": {
     "^.+\\.tsx?$": "ts-jest"
   },
-  "transformIgnorePatterns": ["node_modules/(?!YOUR_PACKAGE_NAME)"],
+  "transformIgnorePatterns": ["node_modules/"],
   "collectCoverage": true,
   "coverageDirectory": "coverage",
   "collectCoverageFrom": ["src/**/*.ts"],
