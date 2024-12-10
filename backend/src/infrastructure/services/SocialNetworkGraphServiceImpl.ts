@@ -5,7 +5,7 @@ import { DegreesOfSeparationCount } from "../../domain/interfaces/DegreesOfSepar
 type Graph = Map<string, string[]>;
 
 export class SocialNetworkGraphServiceImpl implements SocialNetworkGraphService {
-  public countPeopleWithNoConnections(graph: SocialNetworkGraph): number {
+  public async countPeopleWithNoConnections(graph: SocialNetworkGraph): Promise<number> {
     const connectedPeople = new Set<string>();
 
     for (const relationship of graph.relationships) {

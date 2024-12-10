@@ -3,10 +3,10 @@ import { SocialNetworkGraphServiceImpl } from "../../../src/infrastructure/servi
 import { mockGraphOnePersonWithNoConnections } from "../../domain/mocks/graphResponseData";
 
 describe("SocialNetworkGraphService", () => {
-  it("countPeopleWithNoConnections should return 1 for John", () => {
+  it("countPeopleWithNoConnections should return 1 for John", async () => {
     const socialNetworkGraphService = new SocialNetworkGraphServiceImpl();
 
-    const count = socialNetworkGraphService.countPeopleWithNoConnections(
+    const count = await socialNetworkGraphService.countPeopleWithNoConnections(
       mockGraphOnePersonWithNoConnections,
     );
 

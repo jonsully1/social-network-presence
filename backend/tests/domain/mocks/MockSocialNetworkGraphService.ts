@@ -5,7 +5,7 @@ import { SocialNetworkGraph } from "../../../src/domain/interfaces/SocialNetwork
 export class MockSocialNetworkGraphService
   implements SocialNetworkGraphService
 {
-  public countPeopleWithNoConnections(graph: SocialNetworkGraph): number {
+  public async countPeopleWithNoConnections(graph: SocialNetworkGraph): Promise<number> {
     throw new Error("countPeopleWithNoConnections method not implemented.");
   }
 

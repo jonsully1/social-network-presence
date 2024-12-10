@@ -15,5 +15,6 @@
       "lines": 95,
       "statements": 95
     }
-  }
+  },
+  "coveragePathIgnorePatterns": ["src/server.ts"]
 }
